@@ -14,7 +14,7 @@ namespace Log_Parser
 
         [Category("Input")]
         [RequiredArgument]
-        [Description("The Path of the output log file without extension.If the file already exists, it will be overwritten")]
+        [Description("The Path of the output log file without extension.If the file already exists, it will be overwritten.")]
         public InArgument<string> Path { get; set; }
         public enum ddEnum
         {
@@ -25,7 +25,7 @@ namespace Log_Parser
 
         [Category("Input")]
         [RequiredArgument]
-        
+        [Description("The format of the output log file.")]
         public ddEnum Format{ get; set; }
 
         protected override void Execute(CodeActivityContext context)
