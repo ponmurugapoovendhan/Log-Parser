@@ -30,8 +30,8 @@ namespace Log_Parser
 
         protected override void Execute(CodeActivityContext context)
         {
-            string Out_File_Path = OutputFilePath.Get(context);
-            string File_Format = FileFormat.ToString();
+            string Out_File_Path = Path.Get(context);
+            string File_Format = Format.ToString();
             string Log_File_Path = "";
             string[] Log_files = Directory.GetFiles(Environment.ExpandEnvironmentVariables("%LocalAppData%/UiPath/Logs/"));
             StreamWriter Text_File = null;
